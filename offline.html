@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offline - Karan Bikes Service Centre</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+            background: #f8f9fa;
+            color: #264653;
+        }
+        
+        .offline-container {
+            max-width: 500px;
+            padding: 2rem;
+            border-radius: 12px;
+            background: white;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #e63946;
+            margin-bottom: 1rem;
+            font-size: 2rem;
+        }
+        
+        p {
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+            font-size: 1.1rem;
+        }
+        
+        .contact-info {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+        
+        .phone-number {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #e63946;
+            margin: 0.5rem 0;
+            display: block;
+        }
+        
+        .address {
+            margin-top: 1rem;
+            color: #6c757d;
+            line-height: 1.5;
+        }
+        
+        .working-hours {
+            margin-top: 1.5rem;
+            padding: 1rem;
+            background: #e9ecef;
+            border-radius: 6px;
+        }
+        
+        .try-again {
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #dee2e6;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background: #e63946;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+            margin-top: 1rem;
+        }
+        
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+            
+            .phone-number {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="offline-container">
+        <h1>📡 You're Offline</h1>
+        <p>It seems you're not connected to the internet. Here's how you can reach us:</p>
+        
+        <div class="contact-info">
+            <h3>Karan Bikes Service Centre</h3>
+            <a href="tel:+919876543210" class="phone-number">+91 98765 43210</a>
+            <p>Call us for emergency bike & scooty repair</p>
+            <div class="address">
+                <p><strong>Address:</strong> Vijay Park, Gali No. 21</p>
+                <p>Moujpur, Delhi – 110053</p>
+            </div>
+        </div>
+        
+        <div class="working-hours">
+            <p><strong>Working Hours:</strong></p>
+            <p>Monday - Sunday: 9:00 AM - 9:00 PM</p>
+            <p><strong>Emergency Service Available</strong></p>
+        </div>
+        
+        <div class="try-again">
+            <p>Once you're back online, you can access our full website.</p>
+            <button onclick="window.location.reload()" class="btn">Try Again</button>
+        </div>
+    </div>
+    
+    <script>
+        // Check if back online
+        window.addEventListener('online', function() {
+            window.location.reload();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,1199 @@
+<!DOCTYPE html>
+<html lang="hi" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="description"
+        content="Karan Bikes Service Centre - Trusted Bike & Scooty Repairing Shop in Moujpur, Delhi. General service, engine repair, battery replacement. Call now: +919876543210">
+    <meta name="keywords"
+        content="bike repair near me, scooty repairing center in Moujpur, bike service centre Delhi 110053, two wheeler repair shop, affordable bike service, emergency bike repair Delhi, local bike mechanic">
+
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Karan Bikes Service Centre | Bike & Scooty Repair in Delhi">
+    <meta property="og:description"
+        content="Trusted local two-wheeler repairing shop in Moujpur. Same-day service, affordable pricing.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://karanbikesdelhi.com/images/og-image.jpg">
+
+    <title>Karan Bikes Service Centre | Bike & Scooty Repair in Moujpur, Delhi</title>
+
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="style.css" as="style">
+    <link rel="preload"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@400;500;600&display=swap"
+        as="style">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <!-- Schema Markup for Local SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AutoRepair",
+      "name": "Karan Bikes Service Centre",
+      "image": "https://karanbikesdelhi.com/images/logo.jpg",
+      "description": "Trusted Bike & Scooty Repairing Shop in Moujpur, Delhi",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Vijay Park, Gali No. 21",
+        "addressLocality": "Moujpur",
+        "addressRegion": "Delhi",
+        "postalCode": "110053",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 28.6779,
+        "longitude": 77.2815
+      },
+      "url": "https://karanbikesdelhi.com",
+      "telephone": "+919876543210",
+      "openingHours": "Mo-Su 09:00-21:00",
+      "priceRange": "₹₹",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "125"
+      },
+      "serviceType": "Bike Repair, Scooty Repair, Two Wheeler Service",
+      "areaServed": {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+          "@type": "GeoCoordinates",
+          "latitude": 28.6779,
+          "longitude": 77.2815
+        },
+        "geoRadius": "5000"
+      }
+    }
+    </script>
+
+    <!-- Critical CSS (Above the fold) -->
+    <style>
+        /* Critical styles for first paint */
+        .header,
+        .emergency-banner,
+        .hero,
+        .mobile-action-bar,
+        .whatsapp-float {
+            opacity: 1 !important;
+            visibility: visible !important;
+        }
+
+        .emergency-banner {
+            background: linear-gradient(90deg, #e63946, #ff6b6b);
+            color: white;
+            padding: 8px 0;
+            text-align: center;
+            font-weight: 500;
+            position: relative;
+            z-index: 1001;
+        }
+
+        .emergency-banner .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .emergency-call {
+            background: white;
+            color: #e63946;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-weight: 600;
+            text-decoration: none;
+            margin-left: 10px;
+        }
+
+        .header {
+            position: sticky;
+            top: 0;
+            background: white;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            background: #25D366;
+            color: white;
+            padding: 12px 16px;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+            z-index: 999;
+            font-weight: 500;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-5px);
+            }
+        }
+
+        /* iOS 100vh fix */
+        .hero {
+            min-height: 100vh;
+            min-height: -webkit-fill-available;
+        }
+
+        html {
+            height: -webkit-fill-available;
+        }
+
+        /* Prevent horizontal scroll */
+        html,
+        body {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+        /* Touch-friendly buttons */
+        button,
+        .btn,
+        a[href^="tel:"],
+        .nav-menu a {
+            min-height: 44px;
+            min-width: 44px;
+        }
+
+        /* Prevent zoom on input focus iOS */
+        input,
+        select,
+        textarea {
+            font-size: 16px !important;
+        }
+    </style>
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    
+    <!-- Theme Toggle -->
+    <div class="theme-toggle">
+        <button id="themeToggle" aria-label="Toggle dark/light mode">
+            <i class="fas fa-moon"></i>
+        </button>
+    </div>
+
+    <!-- 2. WHATSAPP FLOATING BUTTON -->
+    <a href="https://wa.me/919876543210?text=Hi%2C%20I%20need%20bike%20repair%20service%20at%20Karan%20Bikes%20Service%20Centre%20in%20Moujpur."
+        class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+        <span>Chat on WhatsApp</span>
+    </a>
+
+    <!-- Fixed Mobile Action Bar -->
+    <div class="mobile-action-bar">
+        <a href="tel:+919876543210" class="action-btn">
+            <i class="fas fa-phone"></i>
+            <span>Call</span>
+        </a>
+        <a href="https://wa.me/919876543210?text=Hi%2C%20I%20need%20bike%20repair%20service." target="_blank"
+            class="action-btn">
+            <i class="fab fa-whatsapp"></i>
+            <span>WhatsApp</span>
+        </a>
+        <a href="#location" class="action-btn">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>Map</span>
+        </a>
+        <a href="#booking" class="action-btn">
+            <i class="fas fa-calendar-check"></i>
+            <span>Book</span>
+        </a>
+    </div>
+
+    <!-- Header / Navigation -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">
+                    <span class="logo-icon">🛠️</span>
+                    <div>
+                        <h1>Karan Bikes</h1>
+                        <p>Service Centre</p>
+                    </div>
+                </a>
+
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu" aria-expanded="false"
+                    aria-controls="navMenu">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <ul class="nav-menu" id="navMenu" aria-label="Main navigation">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#why-us">Why Choose Us</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#booking" class="nav-cta">Book Now</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <div class="trust-badge">
+                    <span>Experienced Mechanic | Affordable Service</span>
+                </div>
+
+                <h1 class="hero-title">Karan Bikes Service Centre</h1>
+                <p class="hero-subtitle">All Bike & Scooty Repair Services in Moujpur, Delhi</p>
+                <p class="hero-trust-line">Trusted Local Two-Wheeler Repairing Shop</p>
+
+                <div class="trust-badges">
+                    <span><i class="fas fa-shield-alt"></i> 6 Months Warranty</span>
+                    <span><i class="fas fa-users"></i> 1000+ Customers</span>
+                    <span><i class="fas fa-calendar-check"></i> Since 2015</span>
+                </div>
+
+                <div class="cta-buttons">
+                    <a href="tel:+919876543210" class="btn btn-primary">
+                        <i class="fas fa-phone"></i> Call Now
+                    </a>
+                    <a href="https://wa.me/919876543210?text=Hi%2C%20I%20need%20bike%20repair%20service."
+                        target="_blank" class="btn btn-secondary">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    </a>
+                    <a href="#location" class="btn btn-outline">
+                        <i class="fas fa-map-marker-alt"></i> Get Direction
+                    </a>
+                </div>
+
+                <div class="hero-info">
+                    <p><i class="fas fa-clock"></i> Open Today: 9:00 AM - 9:00 PM</p>
+                    <p><i class="fas fa-map-pin"></i> Vijay Park, Gali No. 21, Moujpur, Delhi – 110053</p>
+                </div>
+            </div>
+
+            <div class="hero-image">
+                <div class="image-placeholder">
+                    <i class="fas fa-motorcycle"></i>
+                    <p>Professional Bike & Scooty Repair</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <p class="section-subtitle">Complete two-wheeler repair and maintenance solutions</p>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>General Bike & Scooty Service</h3>
+                    <p>Complete checkup, cleaning, and maintenance for optimal performance.</p>
+                    <span class="service-time">⏱️ 1-2 Hours</span>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Engine Repair & Overhauling</h3>
+                    <p>Professional engine diagnostics, repair, and complete overhaul services.</p>
+                    <span class="service-time">⏱️ 4-6 Hours</span>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-stop-circle"></i>
+                    </div>
+                    <h3>Brake & Clutch Repair</h3>
+                    <p>Brake adjustment, pad replacement, and clutch system repairs.</p>
+                    <span class="service-time">⏱️ 1-3 Hours</span>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-car-battery"></i>
+                    </div>
+                    <h3>Battery Replacement</h3>
+                    <p>Battery testing, charging, and replacement for all two-wheeler models.</p>
+                    <span class="service-time">⏱️ 30-60 Min</span>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-oil-can"></i>
+                    </div>
+                    <h3>Oil Change & Tuning</h3>
+                    <p>Engine oil change, filter replacement, and performance tuning.</p>
+                    <span class="service-time">⏱️ 45-90 Min</span>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-ambulance"></i>
+                    </div>
+                    <h3>Emergency Two-Wheeler Repair</h3>
+                    <p>Quick roadside assistance and emergency repair services available.</p>
+                    <span class="service-time">⏱️ 24/7 Available</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. SERVICE TIME ESTIMATOR -->
+    <section class="service-estimator">
+        <div class="container">
+            <h2 class="section-title">Service Time Calculator</h2>
+            <p class="section-subtitle">Know approximate time for your repair</p>
+
+            <div class="estimator-box">
+                <div class="estimator-form">
+                    <div class="form-group">
+                        <label for="estimatorVehicle"><i class="fas fa-motorcycle"></i> Vehicle Type:</label>
+                        <select id="estimatorVehicle">
+                            <option value="scooty">Scooty/Activa</option>
+                            <option value="bike">Bike</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="estimatorService"><i class="fas fa-tools"></i> Service Needed:</label>
+                        <select id="estimatorService">
+                            <option value="general">General Service</option>
+                            <option value="engine">Engine Repair</option>
+                            <option value="brake">Brake Service</option>
+                            <option value="battery">Battery Replacement</option>
+                            <option value="emergency">Emergency Repair</option>
+                        </select>
+                    </div>
+
+                    <button id="calculateTime" class="btn btn-primary">
+                        <i class="fas fa-calculator"></i> Calculate Time
+                    </button>
+                </div>
+
+                <div class="estimator-result" id="timeResult">
+                    <h3><i class="fas fa-clock"></i> Estimated Service Time:</h3>
+                    <div class="result-box">
+                        <p>Select service type to see estimated time</p>
+                    </div>
+                    <div class="estimator-cta">
+                        <p>Want exact timing?</p>
+                        <a href="tel:+919876543210" class="btn btn-outline">
+                            <i class="fas fa-phone"></i> Call for Exact Time
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-us" id="why-us">
+        <div class="container">
+            <h2 class="section-title">Why Choose Karan Bikes Service Centre?</h2>
+            <p class="section-subtitle">We provide reliable and affordable two-wheeler repair services</p>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3>Experienced & Skilled Mechanic</h3>
+                    <p>10+ years of experience in bike and scooty repairs with proper training.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-rupee-sign"></i>
+                    </div>
+                    <h3>Affordable & Transparent Pricing</h3>
+                    <p>No hidden charges. Get fair pricing with detailed cost breakdown.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Same-Day Service Available</h3>
+                    <p>Quick turnaround time for most repairs. Get your vehicle same day.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-motorcycle"></i>
+                    </div>
+                    <h3>All Brands Supported</h3>
+                    <p>We service all major bike and scooty brands available in India.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Trusted Repairing Shop</h3>
+                    <p>Most trusted two-wheeler service centre in Moujpur and nearby areas.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Service Warranty</h3>
+                    <p>We provide warranty on our repairs and replaced parts for your peace of mind.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. BIKE/SCOOTY BRAND LOGOS with SVG -->
+    <section class="brands">
+        <div class="container">
+            <h2 class="section-title">Brands We Service</h2>
+            <p class="section-subtitle">All major Indian and international two-wheeler brands</p>
+
+            <div class="brands-grid">
+                <div class="brand-logo">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Honda_Motor_Company_logo.svg"
+                        alt="Honda" loading="lazy" width="60" height="60">
+                    <span>Honda</span>
+                </div>
+                <div class="brand-logo">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Hero_MotoCorp_logo.svg" alt="Hero"
+                        loading="lazy" width="60" height="60">
+                    <span>Hero</span>
+                </div>
+                <div class="brand-logo">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/72/Bajaj_Auto_logo.svg" alt="Bajaj"
+                        loading="lazy" width="60" height="60">
+                    <span>Bajaj</span>
+                </div>
+                <div class="brand-logo">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/06/TVS_Motor_Company_logo.svg" alt="TVS"
+                        loading="lazy" width="60" height="60">
+                    <span>TVS</span>
+                </div>
+                <div class="brand-logo">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Yamaha_Motor_Company_logo.svg"
+                        alt="Yamaha" loading="lazy" width="60" height="60">
+                    <span>Yamaha</span>
+                </div>
+                <div class="brand-logo">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Suzuki_logo_2.svg" alt="Suzuki"
+                        loading="lazy" width="60" height="60">
+                    <span>Suzuki</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. BEFORE-AFTER REPAIR SLIDER -->
+    <section class="before-after">
+        <div class="container">
+            <h2 class="section-title">Before & After Repairs</h2>
+            <p class="section-subtitle">See the quality of our work</p>
+
+            <div class="slider-container">
+                <div class="slider">
+                    <div class="slide active">
+                        <div class="comparison">
+                            <div class="before">
+                                <div class="image-placeholder">
+                                    <i class="fas fa-wrench"></i>
+                                    <p>Engine Before Repair</p>
+                                </div>
+                                <span class="label">Before</span>
+                            </div>
+                            <div class="after">
+                                <div class="image-placeholder">
+                                    <i class="fas fa-check-circle"></i>
+                                    <p>Engine After Repair</p>
+                                </div>
+                                <span class="label">After</span>
+                            </div>
+                        </div>
+                        <p class="slide-caption">Engine Overhauling - Honda Activa</p>
+                    </div>
+
+                    <div class="slide">
+                        <div class="comparison">
+                            <div class="before">
+                                <div class="image-placeholder">
+                                    <i class="fas fa-exclamation-triangle"></i>
+                                    <p>Brake Issue</p>
+                                </div>
+                                <span class="label">Before</span>
+                            </div>
+                            <div class="after">
+                                <div class="image-placeholder">
+                                    <i class="fas fa-shield-alt"></i>
+                                    <p>Brake Fixed</p>
+                                </div>
+                                <span class="label">After</span>
+                            </div>
+                        </div>
+                        <p class="slide-caption">Brake System Repair - Hero Splendor</p>
+                    </div>
+
+                    <div class="slide">
+                        <div class="comparison">
+                            <div class="before">
+                                <div class="image-placeholder">
+                                    <i class="fas fa-battery-empty"></i>
+                                    <p>Battery Dead</p>
+                                </div>
+                                <span class="label">Before</span>
+                            </div>
+                            <div class="after">
+                                <div class="image-placeholder">
+                                    <i class="fas fa-battery-full"></i>
+                                    <p>New Battery</p>
+                                </div>
+                                <span class="label">After</span>
+                            </div>
+                        </div>
+                        <p class="slide-caption">Battery Replacement - TVS Scooty</p>
+                    </div>
+                </div>
+                <div class="slider-nav">
+                    <button class="prev-slide" aria-label="Previous slide"><i class="fas fa-chevron-left"></i></button>
+                    <div class="slider-dots">
+                        <span class="dot active" data-slide="0" aria-label="Slide 1"></span>
+                        <span class="dot" data-slide="1" aria-label="Slide 2"></span>
+                        <span class="dot" data-slide="2" aria-label="Slide 3"></span>
+                    </div>
+                    <button class="next-slide" aria-label="Next slide"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. DISCOUNT COUPON -->
+    <section class="discount-offer">
+        <div class="container">
+            <div class="offer-card">
+                <div class="offer-badge">SPECIAL OFFER</div>
+                <h2><i class="fas fa-gift"></i> ₹200 OFF on First Service</h2>
+                <p>Show this coupon at workshop or mention code below on WhatsApp booking</p>
+                <div class="coupon-code">
+                    <span id="couponText">KARAN200</span>
+                    <button class="copy-coupon-btn"><i class="fas fa-copy"></i> Copy Code</button>
+                </div>
+                <p class="offer-validity"><i class="fas fa-calendar-alt"></i> Valid till: 31 Dec 2024</p>
+                <a href="https://wa.me/919876543210?text=Hi%2C%20I%20want%20to%20avail%20₹200%20OFF%20offer%20with%20code%20KARAN200"
+                    target="_blank" class="btn btn-primary">
+                    <i class="fab fa-whatsapp"></i> Claim Offer on WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <h2 class="section-title">Transparent Pricing</h2>
+            <p class="section-subtitle">Affordable and competitive pricing for common services</p>
+            <p class="pricing-note">*Prices may vary based on vehicle model and condition</p>
+
+            <div class="pricing-grid">
+                <div class="price-card">
+                    <h3>General Service</h3>
+                    <div class="price">Starting ₹299</div>
+                    <p>Complete cleaning, lubrication, and basic checkup</p>
+                    <span class="price-badge">Most Popular</span>
+                </div>
+
+                <div class="price-card">
+                    <h3>Oil Change</h3>
+                    <div class="price">Starting ₹199</div>
+                    <p>Engine oil change with filter replacement</p>
+                </div>
+
+                <div class="price-card">
+                    <h3>Brake Service</h3>
+                    <div class="price">Starting ₹249</div>
+                    <p>Brake adjustment, cleaning, and pad inspection</p>
+                </div>
+
+                <div class="price-card">
+                    <h3>Battery Replacement</h3>
+                    <div class="price">As per brand</div>
+                    <p>Genuine battery with warranty based on your vehicle</p>
+                </div>
+            </div>
+
+            <div class="pricing-cta">
+                <p>For exact pricing, WhatsApp us your vehicle photos</p>
+                <a href="https://wa.me/919876543210?text=Hi%2C%20Please%20send%20me%20exact%20pricing%20for%20my%20vehicle."
+                    target="_blank" class="btn btn-primary">
+                    <i class="fab fa-whatsapp"></i> Get Exact Quote
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. AREA COVERAGE SECTION -->
+    <section class="area-coverage">
+        <div class="container">
+            <h2 class="section-title">Areas We Serve</h2>
+            <p class="section-subtitle">Providing bike & scooty repair services in these localities</p>
+
+            <div class="areas-list">
+                <span class="area-tag active">Moujpur</span>
+                <span class="area-tag">Vijay Park</span>
+                <span class="area-tag">Seelampur</span>
+                <span class="area-tag">Shahdara</span>
+                <span class="area-tag">Jhilmil</span>
+                <span class="area-tag">Dilshad Garden</span>
+                <span class="area-tag">Gokalpur</span>
+                <span class="area-tag">Karawal Nagar</span>
+            </div>
+
+            <div class="coverage-note">
+                <p><i class="fas fa-info-circle"></i> We also provide pickup and drop service in these areas (extra
+                    charges apply)</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Working Hours -->
+    <section class="hours">
+        <div class="container">
+            <h2 class="section-title">Working Hours</h2>
+
+            <div class="hours-card">
+                <div class="hours-icon">
+                    <i class="fas fa-clock"></i>
+                </div>
+
+                <div class="hours-content">
+                    <h3>We're Open 7 Days a Week</h3>
+
+                    <div class="hours-grid">
+                        <div class="day">Monday - Sunday</div>
+                        <div class="time">9:00 AM – 9:00 PM</div>
+                    </div>
+
+                    <div class="emergency-note">
+                        <i class="fas fa-ambulance"></i>
+                        <p>Emergency service available - Please call before visit</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Reviews -->
+    <section class="reviews">
+        <div class="container">
+            <h2 class="section-title">Customer Reviews</h2>
+            <p class="section-subtitle">What our customers say about our service</p>
+
+            <!-- 12. GOOGLE REVIEWS BADGE -->
+            <div class="google-reviews">
+                <a href="https://g.page/karan-bikes/review" target="_blank" class="google-badge">
+                    <img src="https://cdn-icons-png.flaticon.com/512/300/300221.png" alt="Google" loading="lazy"
+                        width="20" height="20">
+                    <span>Rate us on Google</span>
+                    <div class="stars">★★★★★</div>
+                </a>
+            </div>
+
+            <div class="rating-badge">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <div class="rating-text">Google Rating: 4.8/5 (125+ Reviews)</div>
+            </div>
+
+            <div class="reviews-grid">
+                <!-- Review with Photo -->
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div>
+                                <div class="reviewer">Rahul Sharma</div>
+                                <div class="review-location">Moujpur, Delhi</div>
+                            </div>
+                        </div>
+                        <div class="review-date">2 weeks ago</div>
+                    </div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">"Best bike service in Moujpur! Karan bhai fixed my Activa's engine issue same
+                        day. Very reasonable pricing and professional work. Highly recommended!"</p>
+                    <div class="review-verified">
+                        <i class="fas fa-check-circle"></i> Google Verified Review
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div>
+                                <div class="reviewer">Priya Singh</div>
+                                <div class="review-location">Vijay Park, Delhi</div>
+                            </div>
+                        </div>
+                        <div class="review-date">1 month ago</div>
+                    </div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">"My Scooty Pep wasn't starting. Called Karan Bikes and they sent mechanic
+                        within an hour. Problem solved at my home. Honest service and affordable rates!"</p>
+                    <div class="review-verified">
+                        <i class="fas fa-check-circle"></i> Google Verified Review
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div>
+                                <div class="reviewer">Vikram Patel</div>
+                                <div class="review-location">Shahdara, Delhi</div>
+                            </div>
+                        </div>
+                        <div class="review-date">2 months ago</div>
+                    </div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="review-text">"Trustworthy service centre. They explained everything before starting work
+                        and gave proper warranty. Will come again for sure. Thanks Karan Bhai!"</p>
+                    <div class="review-verified">
+                        <i class="fas fa-check-circle"></i> Google Verified Review
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. SERVICE BOOKING FORM -->
+    <section class="booking" id="booking">
+        <div class="container">
+            <h2 class="section-title">Book Service Online</h2>
+            <p class="section-subtitle">Fill this form and we'll call you within 30 minutes</p>
+
+            <div class="booking-container">
+                <div class="booking-info">
+                    <h3><i class="fas fa-info-circle"></i> Why Book Online?</h3>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Priority Service Slot</li>
+                        <li><i class="fas fa-check"></i> Free Inspection</li>
+                        <li><i class="fas fa-check"></i> Exact Price Quotation</li>
+                        <li><i class="fas fa-check"></i> WhatsApp Updates</li>
+                        <li><i class="fas fa-check"></i> Service Warranty</li>
+                    </ul>
+
+                    <div class="booking-cta">
+                        <p>Prefer to call directly?</p>
+                        <a href="tel:+919876543210" class="btn btn-outline">
+                            <i class="fas fa-phone"></i> Call: +91 98765 43210
+                        </a>
+                    </div>
+                </div>
+
+                <div class="booking-form">
+                    <form id="serviceBookingForm">
+                        <div class="form-group">
+                            <label for="customerName"><i class="fas fa-user"></i> Your Name *</label>
+                            <input type="text" id="customerName" placeholder="Enter your name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="customerPhone"><i class="fas fa-phone"></i> Phone Number *</label>
+                            <input type="tel" id="customerPhone" placeholder="Enter 10-digit mobile number" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="bookingVehicle"><i class="fas fa-motorcycle"></i> Vehicle Type *</label>
+                            <select id="bookingVehicle" required>
+                                <option value="">Select Vehicle</option>
+                                <option value="activa">Activa/Scooty</option>
+                                <option value="bike">Bike</option>
+                                <option value="other">Other Two-Wheeler</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="bookingService"><i class="fas fa-tools"></i> Service Needed *</label>
+                            <select id="bookingService" required>
+                                <option value="">Select Service</option>
+                                <option value="general">General Service</option>
+                                <option value="engine">Engine Repair</option>
+                                <option value="brake">Brake Service</option>
+                                <option value="battery">Battery Issue</option>
+                                <option value="emergency">Emergency Repair</option>
+                                <option value="other">Other Problem</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="problemDesc"><i class="fas fa-comment"></i> Describe Problem (Optional)</label>
+                            <textarea id="problemDesc"
+                                placeholder="Briefly describe the issue with your vehicle..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i> Book Service Now
+                        </button>
+
+                        <p class="form-note"><i class="fas fa-shield-alt"></i> We respect your privacy. Your information
+                            is secure.</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <p class="section-subtitle">Common queries about our bike & scooty repair services</p>
+
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq1">
+                        How long does a general service take?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer" id="faq1">
+                        <p>A general service typically takes 1-2 hours. For major repairs, we'll give you an estimated
+                            time after diagnosis. We also provide same-day service for most common issues.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq2">
+                        Do you provide warranty on repairs?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer" id="faq2">
+                        <p>Yes, we provide warranty on both labor and replaced parts. Warranty period depends on the
+                            type of service/part (typically 3-6 months). We provide proper warranty cards for your peace
+                            of mind.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq3">
+                        Is emergency service available?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer" id="faq3">
+                        <p>Yes, we provide 24/7 emergency repair services for bike and scooty breakdowns. Please call us
+                            first to check availability and estimated response time. We serve Moujpur and nearby areas.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq4">
+                        Do I need to book an appointment?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer" id="faq4">
+                        <p>Walk-ins are welcome, but we recommend booking online or calling ahead for major repairs to
+                            ensure we have necessary parts and minimize waiting time. Online booking gives you priority
+                            service.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq5">
+                        What payment methods do you accept?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer" id="faq5">
+                        <p>We accept cash, UPI (Google Pay, PhonePe, Paytm), credit/debit cards, and online bank
+                            transfers. We provide proper invoices and bills for all payments.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq6">
+                        Do you provide pickup and drop service?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer" id="faq6">
+                        <p>Yes, we provide pickup and drop service in Moujpur, Vijay Park, Seelampur, and nearby areas.
+                            Extra charges apply based on distance. Contact us for exact charges.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location & Map Section -->
+    <section class="location" id="location">
+        <div class="container">
+            <h2 class="section-title">Our Location</h2>
+            <p class="section-subtitle">Visit our workshop in Moujpur, Delhi</p>
+
+            <div class="location-content">
+                <div class="address-card">
+                    <h3><i class="fas fa-map-marker-alt"></i> Karan Bikes Service Centre</h3>
+                    <p class="address">Vijay Park, Gali No. 21,<br>Moujpur, Delhi – 110053</p>
+
+                    <div class="location-info">
+                        <p><i class="fas fa-clock"></i> <strong>Timings:</strong> 9:00 AM - 9:00 PM (Mon-Sun)</p>
+                        <p><i class="fas fa-phone"></i> <strong>Phone:</strong> <a href="tel:+919876543210">+91 98765
+                                43210</a></p>
+                        <p><i class="fas fa-exclamation-circle"></i> <strong>Note:</strong> Emergency service available
+                            - Call before visit</p>
+                    </div>
+
+                    <div class="location-cta">
+                        <a href="https://maps.google.com/?q=Vijay+Park,+Gali+No.+21,+Moujpur,+Delhi+110053"
+                            target="_blank" class="btn btn-primary">
+                            <i class="fas fa-directions"></i> Get Directions on Google Maps
+                        </a>
+                        <a href="tel:+919876543210" class="btn btn-outline">
+                            <i class="fas fa-phone"></i> Call Before Visiting
+                        </a>
+                    </div>
+                </div>
+
+                <div class="map-container">
+                    <div class="map-placeholder">
+                        <div class="map-embed">
+                            <!-- Google Maps Embed Code (Replace with actual iframe) -->
+                            <div class="map-fallback">
+                                <i class="fas fa-map-marked-alt"></i>
+                                <h4>Karan Bikes Service Centre</h4>
+                                <p>Vijay Park, Gali No. 21, Moujpur</p>
+                                <p>Delhi - 110053</p>
+                                <div class="map-instructions">
+                                    <p><strong>How to reach:</strong> Near Vijay Park Chowk, Gali No. 21, Red building
+                                        with bike repair signboard</p>
+                                </div>
+                            </div>
+                            <div class="map-code">
+                                <p><small>Add Google Maps embed code here:</small></p>
+                                <code>
+                                    &lt;iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3499.683012455058!2d77.28018831504478!3d28.677888982504375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfc5d5f6b5a5d%3A0x7a5c8a5c5c5c5c5c!2sVijay%20Park%2C%20Gali%20No.%2021%2C%20Moujpur%2C%20Delhi%20110053!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"&gt;&lt;/iframe&gt;
+                                </code>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. REFERRAL PROGRAM -->
+    <section class="referral">
+        <div class="container">
+            <div class="referral-card">
+                <div class="referral-icon">
+                    <i class="fas fa-gift"></i>
+                </div>
+                <div class="referral-content">
+                    <h2>Refer & Earn ₹100</h2>
+                    <p>Refer a friend to Karan Bikes and get ₹100 off on your next service</p>
+                    <div class="referral-code">
+                        <span>Your Referral Code:</span>
+                        <strong id="referralCode">KARANREF100</strong>
+                        <button class="copy-referral-btn"><i class="fas fa-copy"></i> Copy Code</button>
+                    </div>
+                    <p class="referral-note">Share this code with friends. When they use it for service, both get
+                        benefits!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <p class="section-subtitle">Get in touch for bike & scooty repair services</p>
+
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h3>Call Us</h3>
+                        <p>For service inquiries or emergency repairs</p>
+                        <a href="tel:+919876543210" class="contact-link">+91 98765 43210</a>
+                        <p class="contact-note">Available 9 AM - 9 PM</p>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <h3>WhatsApp</h3>
+                        <p>Quick response for quotes and appointments</p>
+                        <a href="https://wa.me/919876543210?text=Hi%2C%20I%20need%20bike%20repair%20service%20at%20Karan%20Bikes%20Service%20Centre."
+                            target="_blank" class="contact-link">Send Message</a>
+                        <p class="contact-note">Usually reply within 10 minutes</p>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3>Visit Workshop</h3>
+                        <p>Walk-in service available during working hours</p>
+                        <p class="contact-address">Vijay Park, Gali No. 21, Moujpur, Delhi - 110053</p>
+                        <a href="#location" class="contact-link">See on Map</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-icon">🛠️</span>
+                    <div>
+                        <h2>Karan Bikes Service Centre</h2>
+                        <p>Trusted Bike & Scooty Repairing Shop in Delhi</p>
+                        <div class="footer-social">
+                            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="https://g.page/karan-bikes/review" target="_blank" aria-label="Google Reviews"><i
+                                    class="fab fa-google"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#why-us">Why Choose Us</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#booking">Book Service</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-services">
+                    <h3>Our Services</h3>
+                    <ul>
+                        <li>General Service</li>
+                        <li>Engine Repair</li>
+                        <li>Brake Service</li>
+                        <li>Battery Replacement</li>
+                        <li>Emergency Repair</li>
+                        <li>Oil Change</li>
+                    </ul>
+                </div>
+
+                <div class="footer-location">
+                    <h3>Service Areas</h3>
+                    <ul>
+                        <li>Moujpur</li>
+                        <li>Vijay Park</li>
+                        <li>Seelampur</li>
+                        <li>Shahdara</li>
+                        <li>Jhilmil</li>
+                        <li>Nearby Delhi Areas</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© <span id="currentYear"></span> Karan Bikes Service Centre. All rights reserved.</p>
+                <p class="disclaimer">This is an informational business website. Prices & services may vary. No false
+                    claims intended.</p>
+                <p class="seo-text">Bike repair near me | Scooty repairing center in Moujpur | Bike service centre Delhi
+                    110053 | Two wheeler repair shop | Affordable bike service | Local bike mechanic | Emergency bike
+                    repair Delhi | Activa service near me | Hero bike repair | Honda service centre Moujpur</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+    <!-- Service Worker Registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(registration => {
+                        console.log('ServiceWorker registered:', registration);
+                    })
+                    .catch(error => {
+                        console.log('ServiceWorker registration failed:', error);
+                    });
+            });
+        }
+    </script>
+</body>
+
+</html>
