@@ -1,6 +1,6 @@
 // Service Worker for Karan Bikes Service Centre
 
-const CACHE_NAME = 'karan-bikes-v1.3';
+const CACHE_NAME = 'karan-bikes-v2.0';
 const urlsToCache = [
   '/',
   '/index.html',
@@ -9,9 +9,7 @@ const urlsToCache = [
   '/manifest.json',
   // Fonts
   'https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@400;500;600&display=swap',
-  'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css',
-  // Fallback page
-  '/offline.html'
+  'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'
 ];
 
 // Install Service Worker
@@ -19,7 +17,7 @@ self.addEventListener('install', event => {
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then(cache => {
-        console.log('Opened cache');
+        console.log('Cache opened');
         return cache.addAll(urlsToCache);
       })
       .then(() => self.skipWaiting())
@@ -44,55 +42,34 @@ self.addEventListener('activate', event => {
 
 // Fetch Strategy: Cache First, Network Fallback
 self.addEventListener('fetch', event => {
-  // Skip non-GET requests and chrome-extension requests
-  if (event.request.method !== 'GET' || 
-      event.request.url.startsWith('chrome-extension://')) {
-    return;
-  }
-  
-  // Skip cross-origin requests
-  if (!event.request.url.startsWith(self.location.origin)) {
-    // For external resources, use network first
-    event.respondWith(fetch(event.request));
-    return;
-  }
-  
+  if (event.request.method !== 'GET') return;
+
   event.respondWith(
     caches.match(event.request)
       .then(response => {
-        // Return cached response if found
         if (response) {
           return response;
         }
-        
-        // Clone the request
-        const fetchRequest = event.request.clone();
-        
-        // Make network request
-        return fetch(fetchRequest).then(response => {
-          // Check if valid response
+
+        return fetch(event.request).then(response => {
           if (!response || response.status !== 200 || response.type !== 'basic') {
             return response;
           }
-          
-          // Clone the response
+
           const responseToCache = response.clone();
-          
-          // Add to cache
+
           caches.open(CACHE_NAME)
             .then(cache => {
               cache.put(event.request, responseToCache);
             });
-          
+
           return response;
         }).catch(() => {
-          // If network fails, return offline page for navigation requests
+          // Return offline page for navigation requests
           if (event.request.mode === 'navigate') {
-            return caches.match('/offline.html');
+            return caches.match('/');
           }
-          
-          // For other requests, return a simple error response
-          return new Response('Network error occurred', {
+          return new Response('Network error', {
             status: 408,
             headers: { 'Content-Type': 'text/plain' }
           });
@@ -100,70 +77,3 @@ self.addEventListener('fetch', event => {
       })
   );
 });
-
-// Background sync for form submissions
-self.addEventListener('sync', event => {
-  if (event.tag === 'sync-forms') {
-    event.waitUntil(syncPendingForms());
-  }
-});
-
-async function syncPendingForms() {
-  // Get pending forms from IndexedDB
-  // Implementation depends on your form handling logic
-  console.log('Syncing pending forms...');
-}
-
-// Push notifications
-self.addEventListener('push', event => {
-  if (!event.data) return;
-  
-  const data = event.data.json();
-  const options = {
-    body: data.body || 'New update from Karan Bikes',
-    icon: 'icons/icon-192x192.png',
-    badge: 'icons/icon-72x72.png',
-    vibrate: [100, 50, 100],
-    data: {
-      url: data.url || '/'
-    },
-    actions: [
-      {
-        action: 'view',
-        title: 'View',
-        icon: 'icons/icon-72x72.png'
-      },
-      {
-        action: 'close',
-        title: 'Close',
-        icon: 'icons/icon-72x72.png'
-      }
-    ]
-  };
-  
-  event.waitUntil(
-    self.registration.showNotification('Karan Bikes Service', options)
-  );
-});
-
-self.addEventListener('notificationclick', event => {
-  event.notification.close();
-  
-  if (event.action === 'view') {
-    event.waitUntil(
-      clients.openWindow(event.notification.data.url)
-    );
-  }
-});
-
-// Periodic sync for updates
-self.addEventListener('periodicsync', event => {
-  if (event.tag === 'update-content') {
-    event.waitUntil(updateContent());
-  }
-});
-
-async function updateContent() {
-  // Update cached content
-  console.log('Updating cached content...');
-}
